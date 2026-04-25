@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: #0b0c0f;
+  color: #e5e5e5;
+}
+
+/* HEADER */
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.85);
+  z-index: 100;
+}
+
+nav a {
+  color: #ccc;
+  margin-left: 24px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  height: 100vh;
+  background: url("images/death-atlas-banner.png") center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.95));
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+
+.logo-title {
+  font-size: 56px;
+  letter-spacing: 3px;
+}
+
+.tagline {
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  margin: 20px 0;
+}
+
+.hero-text {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+
+.btn {
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 6px;
+}
+
+.primary {
+  background: #e63946;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid #888;
+  color: #ddd;
+}
+
+.outline {
+  border: 1px solid #e63946;
+  color: #e63946;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 100px 20px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.section:first-of-type {
+  border-top: none;
+}
+
+.dark {
+  background: #0e0f13;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-label {
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.section-label.red {
+  color: #e63946;
+}
+
+.section h2 {
+  margin: 15px 0 20px;
+}
+
+.section-text {
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #15171c;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* SPLIT */
+
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.split-image {
+  background: url("images/death-atlas-banner.png") center/cover no-repeat;
+  opacity: 0.3;
+}
+
+/* PRIVACY */
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.privacy-card {
+  background: #15171c;
+  padding: 20px;
+}
+
+/* CONTACT */
+
+.center {
+  text-align: center;
+}
+
+.email {
+  color: #e63946;
+  font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+/* POLISH */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card,
+.privacy-card {
+  border-radius: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.privacy-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(230, 57, 70, 0.35);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+.btn {
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary:hover {
+  background: #ff4d5a;
+}
+
+.secondary:hover {
+  border-color: #ff4d5a;
+  color: white;
+}
+
+.site-header {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.hero-content {
+  animation: fadeUp 0.9s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-title {
+  text-shadow: 0 0 30px rgba(230,57,70,0.25);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(230,57,70,0.12), transparent 45%);
+  pointer-events: none;
+}
+
+/* STORE BUTTONS */
+
+/* STORE BADGES */
+
+.store-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.store-link img {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Hover glow */
+.store-link:hover img {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 8px rgba(230,57,70,0.35))
+          drop-shadow(0 0 18px rgba(230,57,70,0.15));
+}
+
+.store-link.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
